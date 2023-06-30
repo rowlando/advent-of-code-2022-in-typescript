@@ -1,4 +1,4 @@
-const fs = require('fs'); // Importing the 'fs' module to handle file system operations
+import fs from 'fs'; // Importing the 'fs' module to handle file system operations
 
 // Main function to read a text file line by line, convert each line to an integer, and find the maximum
 

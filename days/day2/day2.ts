@@ -1,4 +1,6 @@
-const fs = require('fs');
+// @ts-nocheck
+
+import fs from 'fs';
 let totalScore = 0;
 
 fs.readFile('input.txt', 'utf8', (err, data) => {

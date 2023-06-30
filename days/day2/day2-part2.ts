@@ -1,14 +1,12 @@
-export {};
-
-const fs = require('fs');
+import fs from 'fs';
 let totalScore:number = 0;
 
-fs.readFile('input.txt', 'utf8', (err, data) => {
+fs.readFile('input.txt', 'utf8', (err: any, data: string) => {
     if (err) throw err;
     data.split('\n').forEach((line: string) => {
-        const player1Move = convertToMove(line[0]);
+        const player1Move: Move = convertToMove(line[0]);
         const outcome = convertToOutcome(line[2]);
-        let move2;
+        let move2: Move;
 
         switch (outcome) {
             case Outcome.Lose:
@@ -33,7 +31,7 @@ enum Outcome {
     Win = 6,
 }
 
-function convertToOutcome(value: string): Outcome | undefined {
+function convertToOutcome(value: string): Outcome {
     const mapping: Record<string, Outcome> = {
         X: Outcome.Lose,
         Y: Outcome.Draw,
@@ -49,7 +47,7 @@ enum Move {
     Scissors = 3,
 }
 
-function convertToMove(value: string): Move | undefined {
+function convertToMove(value: string): Move {
     const mapping: Record<string, Move> = {
         A: Move.Rock,
         B: Move.Paper,
@@ -62,7 +60,7 @@ function convertToMove(value: string): Move | undefined {
     return mapping[value];
 }
 
-function getLosingMove(move: Move): Move | undefined {
+function getLosingMove(move: Move): Move {
     const losingMoves: Record<Move, Move> = {
         [Move.Rock]: Move.Scissors,
         [Move.Paper]: Move.Rock,
@@ -73,7 +71,7 @@ function getLosingMove(move: Move): Move | undefined {
 }
 
 
-function findTheWinningMove(move: Move): Move | undefined {
+function findTheWinningMove(move: Move): Move {
     const lookupTable: Record<Move, Move> = {
         [Move.Rock]: Move.Paper,
         [Move.Paper]: Move.Scissors,
@@ -83,6 +81,6 @@ function findTheWinningMove(move: Move): Move | undefined {
     return lookupTable[move];
 }
 
-function findTheDrawMove(move: Move): Move | undefined {
+function findTheDrawMove(move: Move): Move {
     return move;
 }
