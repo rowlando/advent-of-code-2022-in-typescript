@@ -2,7 +2,7 @@ const fs = require('fs'); // Importing the 'fs' module to handle file system ope
 
 // Main function to read a text file line by line, convert each line to an integer, and find the maximum
 
-const filePath: string = 'input.txt';
+const filePath: string = '../input.txt';
 const data: string = fs.readFileSync(filePath, 'utf-8'); // Read the file synchronously and store its content as a string
 
 const groups: string[] = data.split('\n\n'); // Split the file content into an array of groups

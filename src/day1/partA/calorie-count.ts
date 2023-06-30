@@ -33,5 +33,5 @@ function readFileAndFindMaximum(filePath: string): void {
 }
 
 // Usage: Replace 'path/to/file.txt' with the actual file path
-const filePath: string = 'input.txt';
+const filePath: string = '../input.txt';
 readFileAndFindMaximum(filePath); // Call the function to read the file and find the maximum number
