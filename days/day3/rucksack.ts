@@ -1,9 +1,9 @@
-import fs from 'fs';
-import { convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52 } from "./convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52";
-import { findLetterWhichAppearsInBothCompartments } from "./findLetterWhichAppearsInBothCompartments";
-import { separateRucksackInHalf } from "./separateRucksackInHalf";
+const fs = require('fs');
+const { convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52 } = require("./convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52");
+const { findLetterWhichAppearsInBothCompartments } = require("./findLetterWhichAppearsInBothCompartments");
+const { separateRucksackInHalf } = require("./separateRucksackInHalf");
 
-fs.readFile('input.txt', 'utf8', (err, data) => {
+fs.readFile('input.txt', 'utf8', (err: any, data: string) => {
     if (err) throw err;
     let sumOfPriorities = 0;
     data.split('\n').forEach((rucksack: string) => {
