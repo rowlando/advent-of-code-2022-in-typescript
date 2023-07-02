@@ -1,7 +1,7 @@
 const fs = require('fs');
-const { convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52 } = require("./convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52");
-const { findLetterWhichAppearsInBothCompartments } = require("./findLetterWhichAppearsInBothCompartments");
-const { separateRucksackInHalf } = require("./separateRucksackInHalf");
+import convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52 from "./convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52";
+import findLetterWhichAppearsInBothCompartments from "./findLetterWhichAppearsInBothCompartments";
+import separateRucksackInHalf from "./separateRucksackInHalf";
 
 fs.readFile('input.txt', 'utf8', (err: any, data: string) => {
     if (err) throw err;

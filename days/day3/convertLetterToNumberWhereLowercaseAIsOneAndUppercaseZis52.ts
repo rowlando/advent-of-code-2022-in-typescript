@@ -1,11 +1,7 @@
-
-
-module.exports = { 
-    convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52: function(letter: string): number {
-        const letterCode = letter.charCodeAt(0);
-        if (letterCode >= 97 && letterCode <= 122) {
-            return letterCode - 96;
-        }
-        return letterCode - 38;
+export default function (letter: string): number {
+    const letterCode = letter.charCodeAt(0);
+    if (letterCode >= 97 && letterCode <= 122) {
+        return letterCode - 96;
     }
- };
+    return letterCode - 38;
+} 
