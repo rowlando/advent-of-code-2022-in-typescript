@@ -2,5 +2,3 @@ node_modules
 dist
 # Ignore .js files
 **/*.js
-# But do not ignore .test.js files
-!**/*.test.js
