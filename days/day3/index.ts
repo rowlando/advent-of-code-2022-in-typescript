@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 import convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52 from "./convertLetterToNumberWhereLowercaseAIsOneAndUppercaseZis52";
 import findLetterWhichAppearsInBothCompartments from "./findLetterWhichAppearsInBothCompartments";
 import separateRucksackInHalf from "./separateRucksackInHalf";
