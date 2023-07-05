@@ -1,5 +1,5 @@
-// The start of packet marker is a string that consists of 4 unique letters somewhere in the input.
-// If a character is repeated within 4 characters of itself, then it is not a start of packet marker.
+// The start of packet marker is a string that consists of n unique letters somewhere in the input.
+// If a character is repeated within n characters of itself, then it is not a start of packet marker.
 export default function(input: string, size: number): number {
     // split the input into an array of characters
     const characters = input.split("");
